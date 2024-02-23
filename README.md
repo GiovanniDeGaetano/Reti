@@ -5,6 +5,6 @@ Sparaco Asia Maria  0124/2519
 <ol>
         <li>gcc client.c -o client</li>
         <li>gcc server.c -o server</li>
-        <li>./server <size M> &</li>
-        <li>./client <Server’s IP></li>
+        <li>./server [size M] &</li>
+        <li>./client [Server’s IP]</li>
 </ol>
