@@ -3,8 +3,12 @@
 
 Compilazione ed esecuzione del progetto<br>
     Compilazione:<br>
-        1. gcc client.c -o client<br>
-        2. gcc server.c -o server<br>
+    <ol>
+        <li>gcc client.c -o client<br>
+        <li>gcc server.c -o server<br>
+    </ol>
     Esecuzione:<br>
-        1. ./server <size M> &<br>
-        2. ./client <Server’s IP><br>
+    <ol> 
+        <li>./server <size M> &<br>
+        <li>./client <Server’s IP><br>
+    </ol>
