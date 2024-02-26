@@ -49,7 +49,7 @@ int main(int argc, char **argv)
         perror("bind");
         exit(1);
     }
-    // Ricezione dei dati dal client
+    // Ricezione del buffer vuoto dal client
     Recvfrom(sfd,buffer,sizeof(buffer),0,(struct sockaddr*)&client,&len);
     // Invio della dimensione della griglia al client
     Sendto(sfd,&M,sizeof(M),0,(struct sockaddr*)&client,sizeof(client));
@@ -76,7 +76,7 @@ int main(int argc, char **argv)
             }
 
         }
-        // Se il client è stato colpito, invia un avviso al client
+        // Se il client Ã¨ stato colpito, invia un avviso al client
         if(crash){
             crash = 0;
             char alert[10] = "alert";
