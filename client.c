@@ -4,7 +4,6 @@
 #include <unistd.h>
 #include <time.h>
 #include <sys/socket.h>
-#include <signal.h>
 #include <arpa/inet.h>
 #include <sys/types.h>
 
@@ -48,7 +47,7 @@ int main(int argc, char **argv)
     Sendto(sfd,pos,sizeof(pos),0,(struct sockaddr*)&server,sizeof(server));
     while(1){
         Recvfrom(sfd,buffer,sizeof(buffer),0,(struct sockaddr*)&server,&len);
-        // Se il messaggio ricevuto Ë "alert", cambia posizione
+        // Se il messaggio ricevuto √® "alert", cambia posizione
         if((strcmp(buffer,"alert")) == 0){
             changePos();
             printf("La navicella si sposta\n");
@@ -76,7 +75,7 @@ void changePos(){
     }
     pos[0] += offsetRow;
     //Si controlla se "offsetRow" non sia uguale a 0 
-    //in modo tale di non avere la possibilit‡ che l'offset per le righe che per le colonne siano entrambi uguali a 0
+    //in modo tale di non avere la possibilit√† che l'offset per le righe che per le colonne siano entrambi uguali a 0
     if(pos[1] == 0){//analogo al if precedente
         if(offsetRow == 0)
             pos[1] += 1;
